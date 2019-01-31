@@ -33,6 +33,7 @@ public class MainPage extends javax.swing.JFrame {
         mainPanel = new javax.swing.JPanel();
         homepagePanel = new javax.swing.JPanel();
         titleLabel = new javax.swing.JLabel();
+        jButton8 = new javax.swing.JButton();
         editMembersPanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -43,10 +44,12 @@ public class MainPage extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         printLabelsPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
         certificatesPanel = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         reportsPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        EditMemberPopupFrame = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -64,19 +67,29 @@ public class MainPage extends javax.swing.JFrame {
         titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLabel.setText("Sympathy Club");
 
+        jButton8.setText("Close Application");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout homepagePanelLayout = new javax.swing.GroupLayout(homepagePanel);
         homepagePanel.setLayout(homepagePanelLayout);
         homepagePanelLayout.setHorizontalGroup(
             homepagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homepagePanelLayout.createSequentialGroup()
-                .addContainerGap(229, Short.MAX_VALUE)
+                .addContainerGap(179, Short.MAX_VALUE)
                 .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(147, 147, 147))
+                .addGap(68, 68, 68)
+                .addComponent(jButton8))
         );
         homepagePanelLayout.setVerticalGroup(
             homepagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homepagePanelLayout.createSequentialGroup()
-                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(homepagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 381, Short.MAX_VALUE))
         );
 
@@ -101,6 +114,11 @@ public class MainPage extends javax.swing.JFrame {
         jButton6.setText("Add Member");
 
         jButton7.setText("Edit Member");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jTextField1.setText("Search...");
 
@@ -151,21 +169,29 @@ public class MainPage extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel3.setText("Print Labels Page");
 
+        jButton9.setText("Print Labels");
+
         javax.swing.GroupLayout printLabelsPanelLayout = new javax.swing.GroupLayout(printLabelsPanel);
         printLabelsPanel.setLayout(printLabelsPanelLayout);
         printLabelsPanelLayout.setHorizontalGroup(
             printLabelsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, printLabelsPanelLayout.createSequentialGroup()
-                .addContainerGap(181, Short.MAX_VALUE)
+            .addGroup(printLabelsPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton9)
+                .addGap(303, 303, 303))
+            .addGroup(printLabelsPanelLayout.createSequentialGroup()
+                .addGap(141, 141, 141)
                 .addComponent(jLabel3)
-                .addGap(103, 103, 103))
+                .addContainerGap(143, Short.MAX_VALUE))
         );
         printLabelsPanelLayout.setVerticalGroup(
             printLabelsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(printLabelsPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(402, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton9)
+                .addContainerGap(359, Short.MAX_VALUE))
         );
 
         mainPanel.add(printLabelsPanel, "panelThree");
@@ -213,6 +239,19 @@ public class MainPage extends javax.swing.JFrame {
         );
 
         mainPanel.add(reportsPanel, "panelFive");
+
+        javax.swing.GroupLayout EditMemberPopupFrameLayout = new javax.swing.GroupLayout(EditMemberPopupFrame);
+        EditMemberPopupFrame.setLayout(EditMemberPopupFrameLayout);
+        EditMemberPopupFrameLayout.setHorizontalGroup(
+            EditMemberPopupFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 704, Short.MAX_VALUE)
+        );
+        EditMemberPopupFrameLayout.setVerticalGroup(
+            EditMemberPopupFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 473, Short.MAX_VALUE)
+        );
+
+        mainPanel.add(EditMemberPopupFrame, "card7");
 
         jButton1.setText("Home");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -308,6 +347,14 @@ public class MainPage extends javax.swing.JFrame {
             card.show(mainPanel, "panelThree");
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // add code later
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -344,6 +391,7 @@ public class MainPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel EditMemberPopupFrame;
     private javax.swing.JPanel certificatesPanel;
     private javax.swing.JPanel editMembersPanel;
     private javax.swing.JPanel homepagePanel;
@@ -354,6 +402,8 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
